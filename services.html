@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | HimTech Studio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/himtech-favicon.png" type="image/png">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- ========== HEADER START ========== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/icons/himtech-logo.png" alt="HimTech Studio Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="https://wa.me/254700800275" class="btn btn-whatsapp ms-lg-3">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp Me
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- ========== HEADER END ========== -->
+
+    <!-- Services Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-1 order-2">
+                    <h1 class="services-title">Our Services</h1>
+                    <p class="services-subtitle">At HimTech Studio, we specialize in two core areas: Custom Web Design and Data Analysis. Whether you need a lightning-fast website or actionable business insights, we deliver solutions tailored to your goals.</p>
+                </div>
+                <div class="col-lg-6 order-lg-2 order-1 mb-lg-0 mb-4">
+                    <img src="assets/images/hero-section-image3.jpg" alt="Our Services" class="img-fluid floating-animation">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Web Design Service -->
+    <section class="service-section web-design-service">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h2>Precision Web Design</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>We build websites from scratch using pure HTML5, CSS3, and JavaScript — no bloated templates or restrictive frameworks.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Blazing-fast performance (no unnecessary code slowing you down)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>100% custom designs that reflect your unique brand</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Flawless responsiveness on all devices</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>SEO-friendly and future-proof architecture</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-extra">
+                        <h4>Need more power?</h4>
+                        <p>We also work with modern frameworks like React, Vue.js, or Next.js for dynamic web apps.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Vue.js</span>
+                            <span class="tech-badge">Next.js</span>
+                            <span class="tech-badge">GSAP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Analysis Service -->
+    <section class="service-section data-analysis-service">
+        <div class="container">
+            <div class="service-header">
+                <div class="service-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h2>Advanced Data Analysis</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Turn raw data into strategic decisions with our expertise in:</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <i class="fas fa-database"></i>
+                            <span><strong>SQL:</strong> We write efficient queries to extract and analyze data directly from your databases</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-file-excel"></i>
+                            <span><strong>Excel & Google Sheets:</strong> Custom models for financial tracking, forecasting, and reporting</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-chart-pie"></i>
+                            <span><strong>Power BI:</strong> Interactive dashboards that visualize trends, KPIs, and real-time insights</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="service-extra">
+                        <h4>Comprehensive Data Solutions</h4>
+                        <p>We unify your data sources to give you a clear, actionable view of your business.</p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">SQL</span>
+                            <span class="tech-badge">Power BI</span>
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>💻 Web Design Packages</h2>
+            <p>We build clean, fast, and custom websites — from scratch. No templates, just real design made for you.</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Basic Website -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card basic">
+                    <div class="pricing-header">
+                        <h3>Basic Website</h3>
+                        <div class="price"> From 7,500 <span>KES</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1-3 pages (Home, About, Contact)</li>
+                            <li><i class="fas fa-check"></i> Mobile responsive</li>
+                            <li><i class="fas fa-check"></i> Basic contact form</li>
+                            <li><i class="fas fa-check"></i> 1 round of revisions</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 3-5 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Best for: Personal use or side hustle</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20the%20Basic%20Website%20package" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Website -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card business">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Business Website</h3>
+                        <div class="price">From 15,000 <span>KES</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 4-6 pages</li>
+                            <li><i class="fas fa-check"></i> Mobile responsive</li>
+                            <li><i class="fas fa-check"></i> Service/price display</li>
+                            <li><i class="fas fa-check"></i> 2 rounds of revisions</li>
+                            <li><i class="fas fa-check"></i> Basic SEO setup</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 5-7 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Best for: Small businesses</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20the%20Business%20Website%20package" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Website -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card professional">
+                    <div class="pricing-header">
+                        <h3>Professional Website</h3>
+                        <div class="price"> From 25,000 <span>KES</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> 7-10 pages</li>
+                            <li><i class="fas fa-check"></i> Advanced design</li>
+                            <li><i class="fas fa-check"></i> Custom animations</li>
+                            <li><i class="fas fa-check"></i> 3 rounds of revisions</li>
+                            <li><i class="fas fa-check"></i> SEO optimized</li>
+                            <li><i class="fas fa-check"></i> Blog setup</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 7-10 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Best for: Companies & brands</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20the%20Professional%20Website%20package" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ecommerce store -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card shop">
+                    <div class="popular-badge">Premium</div>
+                    <div class="pricing-header">
+                        <h3>Ecommerce store (Frontend)</h3>
+                        <div class="price">From 45,000 <span>KES</span></div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Product catalog</li>
+                            <li><i class="fas fa-check"></i> Shopping cart</li>
+                            <li><i class="fas fa-check"></i> Product categories</li>
+                            <li><i class="fas fa-check"></i> Custom design</li>
+                            <li><i class="fas fa-check"></i> Contact form</li>
+                            <li><i class="fas fa-check"></i> *No payment system</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 10-15 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Best for: E-commerce stores</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20the%20Online%20Shop%20package" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- Data Analysis Pricing Section -->
+<section class="data-analysis-pricing">
+    <div class="container">
+        <div class="section-header">
+            <h2>📊 Data Analysis Services</h2>
+            <p>Unlock the power of your data with our professional analysis services using Excel, SQL, Power BI, and database tools</p>
+        </div>
+
+        <div class="row g-4">
+            <!-- Basic Data Cleanup -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card data-basic">
+                    <div class="pricing-header">
+                        <h3>Basic Data Cleanup</h3>
+                        <div class="price">2,500 - 4,000 <span>KES</span></div>
+                        <div class="price-note">One-time</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Cleaning messy Excel sheets</li>
+                            <li><i class="fas fa-check"></i> Removing duplicates & errors</li>
+                            <li><i class="fas fa-check"></i> Basic totals & summaries</li>
+                            <li><i class="fas fa-check"></i> Income/expense tracking</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 2-3 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Perfect for: Organizing raw business data</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20Basic%20Data%20Cleanup" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visual Dashboards -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card data-dashboard">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Visual Dashboards</h3>
+                        <div class="price">6,000 - 12,000 <span>KES</span></div>
+                        <div class="price-note">One-time</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Custom Excel/Power BI dashboards</li>
+                            <li><i class="fas fa-check"></i> Sales trends & growth charts</li>
+                            <li><i class="fas fa-check"></i> Dynamic filters & views</li>
+                            <li><i class="fas fa-check"></i> Exportable reports</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 5-7 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Ideal for: Business reports & tracking</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20Visual%20Dashboards" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advanced Analysis -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card data-advanced">
+                    <div class="pricing-header">
+                        <h3>Advanced Analysis</h3>
+                        <div class="price">10,000 - 25,000+ <span>KES</span></div>
+                        <div class="price-note">One-time</div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Complex SQL queries</li>
+                            <li><i class="fas fa-check"></i> Multi-source data combining</li>
+                            <li><i class="fas fa-check"></i> Deep insights & recommendations</li>
+                            <li><i class="fas fa-check"></i> Monthly performance reports</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-clock"></i> Delivery: 7-10 days
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Best for: Decision-making insights</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20Advanced%20Data%20Analysis" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Plans -->
+            <div class="col-lg-3 col-md-6">
+                <div class="pricing-card data-monthly">
+                    <div class="pricing-header">
+                        <h3>Monthly Support</h3>
+                        <div class="price-range">
+                            <div class="price">3,000 <span>KES/mo</span></div>
+                            <div class="price-divider">to</div>
+                            <div class="price">7,000 <span>KES/mo</span></div>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> <strong>Light Plan:</strong> Basic updates & support</li>
+                            <li><i class="fas fa-check"></i> <strong>Pro Plan:</strong> New dashboards & reports</li>
+                            <li><i class="fas fa-check"></i> Ongoing data consulting</li>
+                            <li><i class="fas fa-check"></i> Priority assistance</li>
+                        </ul>
+                        <div class="delivery-time">
+                            <i class="fas fa-sync-alt"></i> Continuous support
+                        </div>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="best-for">Perfect for: Regular data needs</p>
+                        <a href="https://wa.me/254700800275?text=I'm%20interested%20in%20Monthly%20Data%20Support" class="btn btn-pricing">
+                            Get Started <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Section -->
+        <div class="tools-section">
+            <h3 class="tools-title">Tools We Use</h3>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <img src="assets/icons/excel-icon.png" alt="Excel" class="tool-icon">
+                    <h4>Excel</h4>
+                    <p>Data entry, cleaning, simple dashboards</p>
+                </div>
+                <div class="tool-card">
+                    <img src="assets/icons/powerbi-icon.png" alt="Power BI" class="tool-icon">
+                    <h4>Power BI</h4>
+                    <p>Interactive business dashboards</p>
+                </div>
+                <div class="tool-card">
+                    <img src="assets/icons/sql-icon.png" alt="SQL" class="tool-icon">
+                    <h4>SQL</h4>
+                    <p>Large or complex databases</p>
+                </div>
+                <div class="tool-card">
+                    <img src="assets/icons/google-sheets-icon.png" alt="Google Sheets" class="tool-icon">
+                    <h4>Google Sheets</h4>
+                    <p>Online collaboration</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose-data">
+            <h3 class="why-title">Why Choose Our Data Analysis Services?</h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-comment-alt"></i>
+                        <h4>Simple Explanations</h4>
+                        <p>No jargon - just clear insights</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-chart-bar"></i>
+                        <h4>Beautiful Visuals</h4>
+                        <p>Easy-to-understand charts</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Smart Insights</h4>
+                        <p>Actionable recommendations</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-users"></i>
+                        <h4>For All Sectors</h4>
+                        <p>Businesses, NGOs, schools & individuals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Add-Ons Section -->
+<div class="addons-section">
+    <h3 class="addons-title">🛠 Add-On Services</h3>
+    <div class="row">
+        <!-- Row 1 -->
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Domain & Hosting Help</h4>
+                    <div class="addon-price">3,000 KES</div>
+                </div>
+                <p>We'll help you purchase and set up your domain and hosting</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Logo Design</h4>
+                    <div class="addon-price">2,500 KES</div>
+                </div>
+                <p>Custom logo design to match your brand identity</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Google SEO</h4>
+                    <div class="addon-price">4,000 KES</div>
+                </div>
+                <p>Basic search engine optimization for better visibility</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Landing Page</h4>
+                    <div class="addon-price">4,500 KES</div>
+                </div>
+                <p>Single high-conversion page for campaigns</p>
+            </div>
+        </div>
+        
+        <!-- Row 2 - New Services -->
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Google Ads Setup</h4>
+                    <div class="addon-price">4,000 KES</div>
+                </div>
+                <p>We help you advertise your website on Google so people can find your business fast</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Graphic Design</h4>
+                    <div class="addon-price">From 2,000 KES</div>
+                </div>
+                <p>We create posters, banners, logos, and visuals that match your brand's look</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Content Writing</h4>
+                    <div class="addon-price">From 1,500 KES</div>
+                </div>
+                <p>We write clear and engaging text for your website so your message sounds perfect</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+            <div class="addon-card">
+                <div class="addon-header">
+                    <h4>Social Media Management</h4>
+                    <div class="addon-price">From 5,000/month</div>
+                </div>
+                <p>We manage your Facebook, Instagram, and more — posting regularly and replying to messages</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Why Choose Us -->
+        <div class="why-choose-us">
+            <h3 class="why-title">👌 Why Choose HimTech Studio?</h3>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h4>100% Custom</h4>
+                        <p>No templates - every design is original</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile Perfect</h4>
+                        <p>Flawless on all devices</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h4>User Friendly</h4>
+                        <p>Easy to use and navigate</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="why-card">
+                        <i class="fas fa-headset"></i>
+                        <h4>Ongoing Support</h4>
+                        <p>We don't disappear after delivery</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Portfolio CTA Section -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>See Our Work in Action</h2>
+                <p>Explore our portfolio to see examples of our web design and data analysis projects.</p>
+                <a href="portfolio.html" class="btn btn-primary btn-lg pulse-animation">
+                    <span>View Portfolio</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER START ========== -->
+    <footer>
+        <!-- Your existing footer code -->
+                <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about">
+                        <img src="assets/icons/himtech-logo.png" alt="HimTech Studio Logo" class="footer-logo">
+                        <p>Turning ideas into digital solutions with professional web design and data analysis services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="services.html#">Services</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> <a href="tel:+254700800275">0700 800 275</a></li>
+                            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254700800275">WhatsApp</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:meikehim254@gmail.com">meikehim254@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://twitter.com/@MichaelMus1832" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/meike-him" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/meike_him/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 HimTech Studio. Designed by <a href="himtechstudio.co.ke">HimTech Studio</a>.</p>
+            </div>
+        </div>
+        
+    </footer>
+    <!-- ========== FOOTER END ========== -->
+
+    <!-- WhatsApp Widget -->
+
+        <!-- WhatsApp Floating Widget -->
+            <div class="whatsapp-widget">
+            <div class="whatsapp-preview">
+                <div class="whatsapp-header">
+                <img src="assets/images/whatsapp-icon.png" alt="Meike" class="profile-img">
+                <div class="profile-info">
+                    <h5>Meike Him</h5>
+                    <p>Typically replies within 1 hour</p>
+                </div>
+                </div>
+                <div class="whatsapp-message">
+                <p>Hi there! 👋 How can I help you today?</p>
+                </div>
+            </div>
+            <a href="https://wa.me/254700800275" class="whatsapp-icon" aria-label="Chat on WhatsApp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            </div>
+    <!-- Your existing WhatsApp widget code -->
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+
+    <!-- Services Page Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Register ScrollTrigger plugin
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Hero section animation
+            gsap.from(".services-title", {
+                y: 50,
+                opacity: 0,
+                duration: 1,
+                delay: 0.3,
+                ease: "power3.out"
+            });
+            
+            gsap.from(".services-subtitle", {
+                y: 30,
+                opacity: 0,
+                duration: 0.8,
+                delay: 0.6,
+                ease: "power2.out"
+            });
+            
+            gsap.from(".floating-animation", {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                delay: 0.4,
+                ease: "elastic.out(1, 0.5)"
+            });
+            
+            // Service sections animations
+            gsap.utils.toArray(".service-section").forEach((section, i) => {
+                gsap.from(section, {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 70%",
+                        toggleActions: "play none none none"
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    delay: i * 0.1,
+                    ease: "back.out(1.2)"
+                });
+                
+                // Animate service features
+                gsap.from(section.querySelectorAll(".feature-item"), {
+                    scrollTrigger: {
+                        trigger: section,
+                        start: "top 60%",
+                        toggleActions: "play none none none"
+                    },
+                    x: -30,
+                    opacity: 0,
+                    duration: 0.6,
+                    stagger: 0.15,
+                    ease: "power1.out"
+                });
+            });
+            
+            // Portfolio CTA animation
+            gsap.from(".portfolio-cta", {
+                scrollTrigger: {
+                    trigger: ".portfolio-cta",
+                    start: "top 70%",
+                    toggleActions: "play none none none"
+                },
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: "back.out(1.2)"
+            });
+        });
+    </script>
+</body>
+</html>

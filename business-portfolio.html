@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meike Him - Business Consultant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add missing root variables based on CSS usage */
+        :root {
+            --primary: #4361ee; /* Example blue based on rgba(67, 97, 238, 0.1) */
+            --dark: #212529; /* Example dark color */
+            --light: #f8f9fa; /* Example light background color */
+            --gray: #6c757d; /* Example gray color */
+            --light-gray: #dee2e6; /* Example light gray color */
+            --gradient: linear-gradient(to right, #4361ee, #4cc9f0); /* Example gradient */
+            --transition: all 0.3s ease; /* Example transition */
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.1); /* Example small shadow */
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1); /* Example medium shadow */
+            --shadow-lg: 0 10px 15px rgba(0,0,0,0.1); /* Example large shadow */
+        }
+
+        /* Paste the complete CSS provided by the user here */
+        /* ===== Base Styles ===== */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+
+        body {
+          font-family: 'Inter', sans-serif;
+          line-height: 1.6;
+          color: var(--dark);
+          background-color: #ffffff;
+          overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+          font-family: 'Playfair Display', serif;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+
+        a {
+          text-decoration: none;
+          color: inherit;
+          transition: var(--transition);
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+          display: block;
+        }
+
+        .container {
+          width: 100%;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1.5rem;
+        }
+
+        section {
+          padding: 5rem 0;
+        }
+
+        .btn {
+          display: inline-block;
+          font-weight: 600;
+          padding: 0.75rem 1.75rem;
+          border-radius: 50px;
+          transition: var(--transition);
+          border: none;
+          cursor: pointer;
+          text-align: center;
+        }
+
+        .btn-primary {
+          background: var(--gradient);
+          color: white;
+          box-shadow: var(--shadow-sm);
+        }
+
+        .btn-primary:hover {
+          transform: translateY(-3px);
+          box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+          background: transparent;
+          color: var(--primary);
+          border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+          background: var(--primary);
+          color: white;
+        }
+
+        .section-title {
+          text-align: center;
+          margin-bottom: 3rem;
+          position: relative;
+        }
+
+        .section-title h2 {
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .section-title p {
+          color: var(--gray);
+          max-width: 600px;
+          margin: 0 auto;
+        }
+
+        .section-title::after {
+          content: '';
+          display: block;
+          width: 80px;
+          height: 4px;
+          background: var(--gradient);
+          margin: 1.5rem auto 0;
+          border-radius: 2px;
+        }
+
+        /* ===== Header ===== */
+        header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+          background-color: rgba(255, 255, 255, 0.98);
+          box-shadow: var(--shadow-sm);
+          transition: var(--transition);
+        }
+
+        header.scrolled {
+          box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1.5rem 0;
+        }
+
+        .logo {
+          font-size: 1.75rem;
+          font-weight: 700;
+          color: var(--primary);
+          display: flex;
+          align-items: center;
+        }
+
+        .logo span {
+          color: var(--dark);
+        }
+
+        .nav-links {
+          display: flex;
+          list-style: none;
+        }
+
+        .nav-links li {
+          margin-left: 2rem;
+        }
+
+        .nav-links a {
+          font-weight: 500;
+          position: relative;
+          padding: 0.5rem 0;
+        }
+
+        .nav-links a::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background: var(--primary);
+          transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+          width: 100%;
+        }
+
+        .mobile-menu-btn {
+          display: none;
+          background: none;
+          border: none;
+          font-size: 1.5rem;
+          color: var(--dark);
+          cursor: pointer;
+        }
+
+        /* ===== Hero Section ===== */
+        .hero {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+                      url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80') center/cover no-repeat;
+          padding-top: 80px; /* Adjust based on header height */
+          position: relative; /* Added for hero-image absolute positioning */
+        }
+
+        .hero-content {
+          max-width: 600px;
+          z-index: 1; /* Ensure content is above the image */
+          position: relative; /* Ensure content is positioned relative to hero */
+        }
+
+        .hero h1 {
+          font-size: 3.5rem;
+          margin-bottom: 1.5rem;
+          line-height: 1.1;
+        }
+
+        .hero p {
+          font-size: 1.25rem;
+          color: var(--gray);
+          margin-bottom: 2rem;
+        }
+
+        .hero-btns {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .hero-image {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 50%;
+          max-width: 600px;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: var(--shadow-lg);
+          z-index: 0; /* Behind the content */
+        }
+
+        .hero-image img {
+          width: 100%;
+          height: auto;
+          transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+          transform: scale(1.05);
+        }
+
+        /* ===== About Section ===== */
+        .about {
+          background-color: var(--light);
+        }
+
+        .about-container {
+          display: flex;
+          align-items: center;
+          gap: 14rem;
+        }
+
+        .about-image {
+          flex: 0.6;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: var(--shadow-md);
+          
+        }
+
+        .about-image img {
+          width: 100%;
+          height: auto;
+          transition: var(--transition);
+        }
+
+        .about-image:hover img {
+          transform: scale(1.05);
+        }
+
+        .about-content {
+          flex: 1;
+        }
+
+        .about-content h2 {
+          font-size: 2.25rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .about-content p {
+          margin-bottom: 1.5rem;
+          color: var(--gray);
+        }
+
+        .skills {
+          margin-top: 2rem;
+        }
+
+        .skill-item {
+          margin-bottom: 1.5rem;
+        }
+
+        .skill-name {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+        }
+
+        .skill-bar {
+          height: 8px;
+          background-color: var(--light-gray);
+          border-radius: 4px;
+          overflow: hidden;
+        }
+
+        .skill-progress {
+          height: 100%;
+          background: var(--gradient);
+          border-radius: 4px;
+        }
+
+        /* ===== Services Section ===== */
+        .services-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 2rem;
+        }
+
+        .service-card {
+          background: white;
+          border-radius: 16px;
+          padding: 2rem;
+          box-shadow: var(--shadow-sm);
+          transition: var(--transition);
+          text-align: center;
+        }
+
+        .service-card:hover {
+          transform: translateY(-10px);
+          box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+          width: 80px;
+          height: 80px;
+          margin: 0 auto 1.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: rgba(67, 97, 238, 0.1);
+          color: var(--primary);
+          font-size: 2rem;
+          border-radius: 50%;
+          transition: var(--transition);
+        }
+
+        .service-card:hover .service-icon {
+          background: var(--gradient);
+          color: white;
+          transform: rotateY(180deg);
+        }
+
+        .service-card h3 {
+          margin-bottom: 1rem;
+        }
+
+        .service-card p {
+          color: var(--gray);
+        }
+
+        /* ===== Portfolio Section ===== */
+        .portfolio-filter {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 2rem;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
+        .filter-btn {
+          padding: 0.5rem 1.5rem;
+          background: transparent;
+          border: 1px solid var(--light-gray);
+          border-radius: 50px;
+          cursor: pointer;
+          transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+          background: var(--gradient);
+          color: white;
+          border-color: transparent;
+        }
+
+        .portfolio-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .portfolio-item {
+          position: relative;
+          border-radius: 16px;
+          overflow: hidden;
+          box-shadow: var(--shadow-sm);
+          transition: var(--transition);
+        }
+
+        .portfolio-item:hover {
+          transform: translateY(-10px);
+          box-shadow: var(--shadow-lg);
+        }
+
+        .portfolio-img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img {
+          transform: scale(1.1);
+        }
+
+        .portfolio-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 1.5rem;
+          opacity: 0;
+          transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+          opacity: 1;
+        }
+
+        .portfolio-overlay h3 {
+          color: white;
+          margin-bottom: 0.5rem;
+          transform: translateY(20px);
+          transition: var(--transition);
+        }
+
+        .portfolio-overlay p {
+          color: rgba(255,255,255,0.8);
+          transform: translateY(20px);
+          transition: var(--transition);
+          transition-delay: 0.1s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay h3,
+        .portfolio-item:hover .portfolio-overlay p {
+          transform: translateY(0);
+        }
+
+        /* ===== Testimonials Section ===== */
+        .testimonials {
+          background-color: var(--light);
+        }
+
+        .testimonial-slider {
+          max-width: 800px;
+          margin: 0 auto;
+          /* Placeholder for slider library styles if needed */
+        }
+
+        .testimonial-card {
+          background: white;
+          padding: 2rem;
+          border-radius: 16px;
+          box-shadow: var(--shadow-sm);
+          margin: 0 1rem; /* Added margin for potential slider spacing */
+          text-align: center;
+        }
+
+        .client-img {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          margin: 0 auto 1.5rem;
+          overflow: hidden;
+          border: 3px solid var(--primary);
+        }
+
+        .client-img img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .testimonial-card p {
+          font-style: italic;
+          color: var(--gray);
+          margin-bottom: 1.5rem;
+        }
+
+        .client-name {
+          font-weight: 600;
+          margin-bottom: 0.25rem;
+        }
+
+        .client-title {
+          color: var(--gray);
+          font-size: 0.9rem;
+        }
+
+        /* ===== Contact Section ===== */
+        .contact-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 3rem;
+        }
+
+        .contact-info {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+
+        .contact-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+
+        .contact-icon {
+          width: 50px;
+          height: 50px;
+          background: rgba(67, 97, 238, 0.1);
+          color: var(--primary);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+          flex-shrink: 0;
+        }
+
+        .contact-text h3 {
+          margin-bottom: 0.25rem;
+        }
+
+        .contact-text p,
+        .contact-text a {
+          color: var(--gray);
+        }
+
+        .contact-form .form-group {
+          margin-bottom: 1.5rem;
+        }
+
+        .contact-form label {
+          display: block;
+          margin-bottom: 0.5rem;
+          font-weight: 500;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+          width: 100%;
+          padding: 0.75rem 1rem;
+          border: 1px solid var(--light-gray);
+          border-radius: 8px;
+          transition: var(--transition);
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+          outline: none;
+          border-color: var(--primary);
+          box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        .contact-form textarea {
+          min-height: 150px;
+          resize: vertical;
+        }
+
+        /* ===== Footer ===== */
+        footer {
+          background-color: var(--dark);
+          color: white;
+          padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 2rem;
+          margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+          font-size: 1.25rem;
+          margin-bottom: 1.5rem;
+          position: relative;
+          padding-bottom: 0.75rem;
+        }
+
+        .footer-col h3::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 50px;
+          height: 2px;
+          background: var(--primary);
+        }
+
+        .footer-col p {
+          color: rgba(255,255,255,0.7);
+          margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+          display: flex;
+          gap: 1rem;
+        }
+
+        .social-link {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.1);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: var(--transition);
+          color: white; /* Ensure icons are visible */
+        }
+
+        .social-link:hover {
+          background: var(--primary);
+          transform: translateY(-3px);
+        }
+
+        .footer-links {
+          list-style: none;
+        }
+
+        .footer-links li {
+          margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+          color: rgba(255,255,255,0.7);
+          transition: var(--transition);
+          display: block;
+        }
+
+        .footer-links a:hover {
+          color: white;
+          transform: translateX(5px);
+        }
+
+        .footer-bottom {
+          text-align: center;
+          padding-top: 2rem;
+          border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-bottom p {
+          color: rgba(255,255,255,0.5);
+          font-size: 0.9rem;
+        }
+
+        /* ===== Responsive Styles ===== */
+        @media (max-width: 992px) {
+          .hero h1 {
+            font-size: 3rem;
+          }
+
+          .hero-image {
+            width: 45%;
+          }
+
+          .about-container {
+            flex-direction: column;
+          }
+
+          .about-image {
+            max-width: 500px;
+            margin: 0 auto;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .mobile-menu-btn {
+            display: block;
+          }
+
+          .nav-links {
+            position: fixed;
+            top: 80px; /* Height of the fixed header */
+            left: 0;
+            width: 100%;
+            background: white;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            box-shadow: var(--shadow-md);
+            transform: translateY(-150%);
+            transition: var(--transition);
+            z-index: 999; /* Below the header */
+          }
+
+          .nav-links.active {
+            transform: translateY(0);
+          }
+
+          .nav-links li {
+            margin: 0 0 1.5rem 0;
+          }
+
+          .hero {
+            text-align: center;
+          }
+
+          .hero-content {
+            margin: 0 auto;
+            max-width: 100%; /* Allow content to take full width */
+          }
+
+          .hero-btns {
+            justify-content: center;
+          }
+
+          .hero-image {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin: 3rem auto 0;
+            transform: none;
+          }
+
+          section {
+            padding: 3rem 0;
+          }
+
+          .section-title h2 {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 576px) {
+          .hero h1 {
+            font-size: 2.5rem;
+          }
+
+          .hero-btns {
+            flex-direction: column;
+          }
+
+          .portfolio-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .section-title h2 {
+            font-size: 1.75rem;
+          }
+        }
+
+        /* ===== Animation Keyframes ===== */
+        @keyframes fadeIn {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+          from { transform: translateY(50px); opacity: 0; }
+          to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* ===== Utility Classes ===== */
+        .text-primary {
+          color: var(--primary);
+        }
+
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-3 { margin-bottom: 1.5rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .mb-5 { margin-bottom: 3rem; }
+
+        .mt-1 { margin-top: 0.5rem; }
+        .mt-2 { margin-top: 1rem; }
+        .mt-3 { margin-top: 1.5rem; }
+        .mt-4 { margin-top: 2rem; }
+        .mt-5 { margin-top: 3rem; }
+
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-container">
+            <a href="#home" class="logo">
+                Meike <span>.</span>H
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Empowering Your Business to Thrive</h1>
+                    <p>Strategic consulting to unlock potential, drive growth, and achieve sustainable success.</p>
+                    <div class="hero-btns">
+                        <a href="#contact" class="btn btn-primary">Get a Free Consultation</a>
+                        <a href="#portfolio" class="btn btn-outline">View Portfolio</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Alex Carter">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="assets/images/business-portfolio-image.jpg" alt="About Alex">
+                </div>
+
+                <div class="about-content">
+                    <div class="section-title text-left">
+                        <h2>Strategic Business Consultant Based in Nairobi</h2>
+                        <p>I specialize in helping small and medium-sized businesses streamline their operations, develop growth strategies, and implement digital solutions that drive results.</p>
+                        <p>My approach combines analytical thinking with creative problem-solving to deliver customized solutions for each client's unique challenges.</p>
+                        
+                         <style>.about-content .section-title::after { display: none; }</style>
+                    </div>
+
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Business Strategy</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Operational Efficiency</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-name">
+                                <span>Digital Transformation</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>What I Offer</h2>
+                    <p>Comprehensive consulting services designed to address your business's unique needs and challenges.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Business Strategy</h3>
+                        <p>Develop comprehensive growth strategies with clear roadmaps for implementation and measurable KPIs.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Process Optimization</h3>
+                        <p>Streamline operations to reduce costs, improve efficiency, and enhance productivity across your organization.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-digital-tachograph"></i>
+                        </div>
+                        <h3>Digital Transformation</h3>
+                        <p>Guide your business through technology adoption and digital strategy implementation for competitive advantage.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Market Expansion</h3>
+                        <p>Develop and execute plans to enter new markets or expand your reach within existing ones.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-holding-usd"></i>
+                        </div>
+                        <h3>Financial Planning</h3>
+                        <p>Create robust financial models and funding strategies to support sustainable business growth.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Team Development</h3>
+                        <p>Build high-performing teams through organizational design, leadership development, and culture shaping.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Case Studies & Projects</h2>
+                    <p>Explore some of my successful consulting engagements and client achievements.</p>
+                </div>
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="strategy">Strategy</button>
+                    <button class="filter-btn" data-filter="digital">Digital</button>
+                    <button class="filter-btn" data-filter="operations">Operations</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="strategy">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Business Strategy" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Retail Expansion Strategy</h3>
+                            <p>Developed 3-year growth plan for regional retailer</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="digital">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Digital Transformation" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>E-commerce Platform</h3>
+                            <p>Digital transformation for traditional manufacturer</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="operations">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Operations" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Supply Chain Optimization</h3>
+                            <p>Reduced logistics costs by 32%</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="strategy">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Market Entry" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Market Entry Strategy</h3>
+                            <p>East Africa expansion for European brand</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="digital">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Team Development" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>HR Digital Transformation</h3>
+                            <p>Implemented cloud-based HR systems</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="operations">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Financial Planning" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Financial Restructuring</h3>
+                            <p>Turnaround strategy for struggling business</p>
+                        </div>
+                    </div>
+                     </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                 <div class="section-title">
+                    <h2>What Clients Say</h2>
+                    <p>Hear from clients who have experienced significant results through my consulting services.</p>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial-card">
+                        <div class="client-img">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Sarah Johnson">
+                        </div>
+                        <p>"Alex transformed our business operations completely. His strategic insights helped us increase profitability by 40% within the first year of implementation."</p>
+                        <h4 class="client-name">Sarah Johnson</h4>
+                        <p class="client-title">CEO, Retail Solutions Ltd</p>
+                    </div>
+                     <div class="testimonial-card">
+                        <div class="client-img">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David Miller">
+                        </div>
+                        <p>"The digital transformation strategy Alex developed was exactly what we needed. It opened up new markets and improved our customer engagement dramatically."</p>
+                        <h4 class="client-name">David Miller</h4>
+                        <p class="client-title">Founder, Tech Innovators Ltd</p>
+                    </div>
+                     <div class="testimonial-card">
+                        <div class="client-img">
+                            <img src="https://randomuser.me/api/portraits/women/76.jpg" alt="Emily Davis">
+                        </div>
+                        <p>"Working with Alex on process optimization was eye-opening. He identified bottlenecks we didn't even know we had, leading to significant cost savings."</p>
+                        <h4 class="client-name">Emily Davis</h4>
+                        <p class="client-title">Operations Manager, Manufacturing Co.</p>
+                    </div>
+                </div>
+                 </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Get In Touch</h2>
+                    <p>Have a project in mind or want to learn more? Contact me today.</p>
+                </div>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Location</h3>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <a href="mailto:alex@businessconsultant.com">alex@businessconsultant.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Call</h3>
+                                <a href="tel:+254700000000">+254 700 000 000</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h3>Working Hours</h3>
+                                <p>Mon-Fri: 9AM - 5PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" placeholder="Enter your name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" placeholder="Enter your email" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" placeholder="Subject" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Enter your message" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h3>Meike.H</h3>
+                <p>Strategic Business Consultant empowering businesses to achieve their full potential through tailored solutions.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Services</h3>
+                 <ul class="footer-links">
+                    <li><a href="#">Business Strategy</a></li>
+                    <li><a href="#">Process Optimization</a></li>
+                    <li><a href="#">Digital Transformation</a></li>
+                    <li><a href="#">Market Expansion</a></li>
+                    <li><a href="#">Financial Planning</a></li>
+                    <li><a href="#">Team Development</a></li>
+                </ul>
+            </div>
+             <div class="footer-col">
+                <h3>Contact Info</h3>
+                 <ul class="footer-links">
+                    <li><p>Nairobi, Kenya</p></li>
+                    <li><a href="mailto:meike@businessconsultant.com">meike@businessconsultant.com</a></li>
+                    <li><a href="tel:+254700000000">+254 700 000 000</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Meike Him. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Header scroll effect
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Add 'scrolled' class after 50px scroll
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Portfolio filtering (basic example)
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block'; // Or use grid/flex display
+                         // Optional: add animation class here
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Testimonial slider (requires a library like Owl Carousel or Swiper)
+        // Example: If using Owl Carousel, you would initialize it here.
+        // For simplicity, this is just a placeholder.
+        // You would add the Owl Carousel CSS and JS links in the <head>
+        // and wrap the testimonial cards in the appropriate slider structure.
+        // e.g., $(document).ready(function(){ $('.testimonial-slider').owlCarousel({...}); });
+         console.log("Basic JS loaded: Smooth scroll, Header scroll, Mobile menu toggle, Portfolio filter (display toggle only). Slider requires a library.");
+
+    </script>
+<a href="index.html" class="floating-back-btn">Get Back</a>
+<style>
+    /* Add this section to your CSS */
+
+/* ===== Floating Button ===== */
+.floating-back-btn {
+  position: fixed;
+  bottom: 2rem; /* Distance from bottom */
+  right: 2rem; /* Distance from right */
+  z-index: 1100; /* Ensure it's above everything */
+  display: inline-block;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  background: var(--gradient); /* Use your defined gradient */
+  color: white;
+  text-decoration: none;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  animation: pulse 2s infinite; /* Apply the pulse animation */
+  text-align: center;
+}
+
+.floating-back-btn:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: var(--shadow-lg);
+  animation: none; /* Stop animation on hover for clearer interaction */
+}
+
+/* Define the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: var(--shadow-md);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: var(--shadow-md);
+  }
+}
+
+/* Optional: Adjust position and size for smaller screens */
+@media (max-width: 768px) {
+  .floating-back-btn {
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
+</style>
+<script>
+    // ... your existing JavaScript ...
+</script>
+
+</body>
+</html>

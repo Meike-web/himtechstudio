@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | HimTech Studio</title>
+
+       <link rel="icon" href="assets/icons/himtech-favicon.png" type="image/png">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* General Animation Styles */
+        .scroll-animate {
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Smooth transition */
+        }
+
+        /* Specific Animation Types */
+        .scroll-animate.fade-in {
+            /* Opacity is handled by .scroll-animate */
+        }
+
+        .scroll-animate.fade-in-up {
+            transform: translateY(40px); /* Start slightly below */
+        }
+
+        .scroll-animate.fade-in-down {
+            transform: translateY(-40px); /* Start slightly above */
+        }
+
+        .scroll-animate.fade-in-left {
+            transform: translateX(-40px); /* Start slightly to the left */
+        }
+
+        .scroll-animate.fade-in-right {
+            transform: translateX(40px); /* Start slightly to the right */
+        }
+
+        .scroll-animate.zoom-in {
+            transform: scale(0.9); /* Start slightly smaller */
+        }
+
+        /* --- When element is visible --- */
+        .scroll-animate.is-visible {
+            opacity: 1;
+            transform: translateY(0) translateX(0) scale(1); /* Return to normal position/size */
+        }
+
+        /* --- Optional: Staggered Animation for list items or grouped elements --- */
+        .scroll-animate.delay-100.is-visible { transition-delay: 0.1s; }
+        .scroll-animate.delay-200.is-visible { transition-delay: 0.2s; }
+        .scroll-animate.delay-300.is-visible { transition-delay: 0.3s; }
+        .scroll-animate.delay-400.is-visible { transition-delay: 0.4s; }
+
+        /* Styling for the hero text for better animation separation */
+        .about-hero h1, .about-hero .lead {
+            /* Will be targeted by .scroll-animate */
+        }
+
+        /* WhatsApp Widget Preview - ensure these styles are sufficient or also in your main CSS */
+        .whatsapp-widget .whatsapp-preview {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.9) translateX(-10px); 
+            transform-origin: bottom right;
+            transition: opacity 0.2s ease-out, transform 0.2s ease-out, visibility 0s linear 0.2s;
+        }
+        
+        /* Back to Top Button - initial state if managed by JS */
+        .back-to-top {
+            /* Your existing styles for positioning, colors, etc. should be in css/style.css or here */
+            /* The JS will handle display and opacity for showing/hiding */
+            transition: opacity 0.3s ease-out; /* Ensure this is present for smooth fade */
+        }
+    </style>
+    
+</head>
+<body>
+
+        <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/icons/himtech-logo.png" alt="HimTech Studio Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <a href="https://wa.me/254700800275" class="btn btn-whatsapp ms-lg-3">
+                        <i class="fab fa-whatsapp me-2"></i>WhatsApp Me
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="about-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="scroll-animate fade-in-up">About HimTech Studio</h1>
+                    <p class="lead scroll-animate fade-in-up delay-100">Where smart design meets smart data</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/images/hero-section-image1.jpg" alt="HimTech Studio Team" class="img-fluid rounded scroll-animate fade-in-right delay-200">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="about-text">
+                        <p class="scroll-animate fade-in-up">Welcome to HimTech Studio — where smart design meets smart data. We're a Kenyan-based digital studio that specializes in two powerful services: Web Design and Data Analysis. Whether you're a small business owner, startup, or organization, we help you look professional online and understand your data better.</p>
+                        
+                        <h3 class="mt-5 scroll-animate fade-in-up">Web Design</h3>
+                        <p class="scroll-animate fade-in-up">Our Web Design service focuses on creating clean, mobile-friendly websites that are fast, modern, and built to impress. We pay attention to every detail — from layout to colors — to make sure your website reflects your brand perfectly.</p>
+                        
+                        <h3 class="mt-5 scroll-animate fade-in-up">Data Analysis</h3>
+                        <p class="scroll-animate fade-in-up">On the Data Analysis side, we help businesses make sense of their data. We create Excel dashboards, generate insightful SQL reports, and simplify complex numbers into visuals and reports you can actually use. If you're overwhelmed with data or spreadsheets, we're here to turn them into something useful.</p>
+                        
+                        <div class="about-highlight mt-5">
+                            <p class="scroll-animate fade-in-up"><i class="fas fa-check-circle me-2"></i> Everything is done 100% online</p>
+                            <p class="scroll-animate fade-in-up delay-100"><i class="fas fa-check-circle me-2"></i> Fast delivery and personal support</p>
+                            <p class="scroll-animate fade-in-up delay-200"><i class="fas fa-check-circle me-2"></i> No physical office visits needed</p>
+                            <p class="scroll-animate fade-in-up delay-300"><i class="fas fa-check-circle me-2"></i> Serving clients across Kenya and beyond</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="footer-about scroll-animate fade-in-up">
+                        <img src="assets/icons/himtech-logo.png" alt="HimTech Studio Logo" class="footer-logo">
+                        <p>Turning ideas into digital solutions with professional web design and data analysis services.</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="footer-links scroll-animate fade-in-up delay-100">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="portfolio.html">Portfolio</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-contact scroll-animate fade-in-up delay-200">
+                        <h4>Contact Us</h4>
+                        <ul>
+                            <li><i class="fas fa-phone-alt"></i> <a href="tel:+254700800275">0700 800 275</a></li>
+                            <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/254700800275">WhatsApp</a></li>
+                            <li><i class="fas fa-envelope"></i> <a href="mailto:meikehim254@gmail.com">meikehim254@gmail.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-social scroll-animate fade-in-up delay-300">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://twitter.com/@MichaelMus1832" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/meike-him" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/meike_him/" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom scroll-animate fade-in delay-400"> <p>&copy; 2025 HimTech Studio. Designed by Meike.</p>
+            </div>
+        </div>
+    </footer>
+    <div class="whatsapp-widget">
+        <div class="whatsapp-preview"> <div class="whatsapp-header">
+            <img src="assets/images/whatsapp-icon.png" alt="Meike" class="profile-img"> <div class="profile-info">
+                <h5>Meike Him</h5>
+                <p>Typically replies within 1 hour</p>
+            </div>
+            </div>
+            <div class="whatsapp-message">
+            <p>Hi there! 👋 How can I help you today?</p>
+            </div>
+        </div>
+        <a href="https://wa.me/254700800275" class="whatsapp-icon" aria-label="Chat on WhatsApp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+    <a href="#" class="back-to-top" style="display: none; opacity: 0;"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Preloader (ensure your .preloader and .loader CSS is in css/style.css or also moved into the <style> block)
+            const preloader = document.querySelector('.preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    preloader.style.display = 'none';
+                });
+            }
+
+            // --- Smooth Scroll Entry Animation ---
+            const animatedElements = document.querySelectorAll('.scroll-animate');
+
+            if (animatedElements.length > 0) {
+                const observerOptions = {
+                    root: null, // observes intersections relative to the viewport
+                    rootMargin: '0px',
+                    threshold: 0.1 // 10% of the element needs to be visible to trigger
+                };
+
+                const observerCallback = (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target); // Optional: Stop observing once animated
+                        }
+                    });
+                };
+
+                const intersectionObserver = new IntersectionObserver(observerCallback, observerOptions);
+
+                animatedElements.forEach(el => {
+                    intersectionObserver.observe(el);
+                });
+            }
+
+            // --- Back to Top Button ---
+            const backToTopButton = document.querySelector('.back-to-top');
+            if (backToTopButton) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) { // Show button after scrolling 300px
+                        backToTopButton.style.display = 'block'; // Or 'inline-block', 'flex' etc. depending on your styling
+                        // Timeout to allow display property to apply before opacity transition
+                        setTimeout(() => {
+                           backToTopButton.style.opacity = '1';
+                        }, 10); 
+                    } else {
+                        backToTopButton.style.opacity = '0';
+                        // Hide completely after fade out transition (match CSS transition duration)
+                        setTimeout(() => {
+                           if (window.scrollY <= 300) backToTopButton.style.display = 'none';
+                        }, 300); // This should match the opacity transition duration from CSS
+                    }
+                });
+
+                backToTopButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // --- WhatsApp Widget Preview ---
+            const whatsappWidget = document.querySelector('.whatsapp-widget');
+            const whatsappIcon = document.querySelector('.whatsapp-widget .whatsapp-icon');
+            const whatsappPreview = document.querySelector('.whatsapp-widget .whatsapp-preview');
+
+            if (whatsappWidget && whatsappIcon && whatsappPreview) {
+                let timer;
+
+                const showPreview = () => {
+                    clearTimeout(timer); 
+                    whatsappPreview.style.visibility = 'visible';
+                    whatsappPreview.style.opacity = '1';
+                    whatsappPreview.style.transform = 'scale(1) translateX(-10px)';
+                };
+
+                const hidePreview = () => {
+                    timer = setTimeout(() => {
+                        whatsappPreview.style.opacity = '0';
+                        whatsappPreview.style.transform = 'scale(0.9) translateX(-10px)';
+                        // Wait for opacity transition to finish before setting visibility to hidden
+                        setTimeout(() => { 
+                            whatsappPreview.style.visibility = 'hidden';
+                        }, 200); // This duration should match the CSS transition duration for opacity/transform
+                    }, 300); 
+                };
+
+                whatsappIcon.addEventListener('mouseover', showPreview);
+                whatsappIcon.addEventListener('focus', showPreview); // For keyboard accessibility
+
+                whatsappIcon.addEventListener('mouseout', hidePreview);
+                whatsappIcon.addEventListener('blur', hidePreview); // For keyboard accessibility
+
+                whatsappPreview.addEventListener('mouseover', showPreview); // Keep preview open if mouse moves onto it
+                whatsappPreview.addEventListener('focusin', showPreview); // For keyboard accessibility
+
+                whatsappPreview.addEventListener('mouseout', hidePreview);
+                whatsappPreview.addEventListener('focusout', hidePreview); // For keyboard accessibility
+            }
+        });
+    </script>
+</body>
+</html>
